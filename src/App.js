@@ -50,20 +50,22 @@ function Avatar() {
 
 function Intro() {
   return (
-    <div>
+    <div className="data">
       <h1>Sodiq Ganiyu</h1>
       <p>
         I am a fantastic Frontend Developer with amazing UIUX skills. I make
-        $2,000 every month starting grom December 2025. I am a fantastic
-        Frontend Developer with amazing UIUX skills. I make $2,000 every month
-        starting grom December 2025.
+        $2,000 every month starting grom December 2025.
       </p>
     </div>
   );
 }
 
 function SkillList() {
-  return <div></div>;
+  return (
+    <div className="skill-list">
+      <Skill />
+    </div>
+  );
 }
 
 function Skill() {
