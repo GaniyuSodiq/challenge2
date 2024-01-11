@@ -63,13 +63,30 @@ function Intro() {
 function SkillList() {
   return (
     <div className="skill-list">
-      <Skill />
+      {skills.map((skill) => (
+        <Skill skillObj={skill} key={skill.skill} />
+      ))}
     </div>
   );
 }
 
-function Skill() {
-  return <span></span>;
+function Skill({ skillObj }) {
+  if (skillObj.level === "advanced") {
+    skillObj.level = "💪";
+  }
+  if (skillObj.level === "intermediate") {
+    skillObj.level = "👍";
+  }
+  if (skillObj.level === "beginner") {
+    skillObj.level = "👶";
+  }
+
+  return (
+    <span className="skill" style={{ backgroundColor: skillObj.color }}>
+      {skillObj.skill}
+      {skillObj.level}
+    </span>
+  );
 }
 
 export default App;
