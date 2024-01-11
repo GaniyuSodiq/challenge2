@@ -38,8 +38,10 @@ function App() {
   return (
     <div className="card">
       <Avatar />
-      <Intro />
-      <SkillList />
+      <div className="data">
+        <Intro />
+        <SkillList />
+      </div>
     </div>
   );
 }
@@ -50,7 +52,7 @@ function Avatar() {
 
 function Intro() {
   return (
-    <div className="data">
+    <div>
       <h1>Sodiq Ganiyu</h1>
       <p>
         I am a fantastic Frontend Developer with amazing UIUX skills. I make
@@ -82,10 +84,10 @@ function Skill({ skillObj }) {
   }
 
   return (
-    <span className="skill" style={{ backgroundColor: skillObj.color }}>
-      {skillObj.skill}
-      {skillObj.level}
-    </span>
+    <div className="skill" style={{ backgroundColor: skillObj.color }}>
+      <span>{skillObj.skill}</span>
+      <span>{skillObj.level}</span>
+    </div>
   );
 }
 
